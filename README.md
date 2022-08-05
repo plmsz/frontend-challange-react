@@ -22,17 +22,17 @@ O objetivo é construir uma **aplicação web front-end** que mostre os **Result
 ### Executando localmente
 
 ---
-
-1. Instalar todos os pacotes com `yarn install`
-2. Executar o comando `yarn start`
-3. Em alguns seguntos a URL: `http://localhost:3000/` ficará disponível
+0. Entre na pasta com `cd sorteio`
+1. Instalar todos os pacotes com `npm install`
+2. Executar o comando `npm start`
+3. Em alguns segundos a URL: `http://localhost:3000/` ficará disponível
 
 ### Executando os testes
 
 ---
 
-- Para executar todos os testes execute o comando `yarn test`
-- Para ver a cobertura do projeto execute o comando `yarn test -- --coverage .`
+- Para executar todos os testes execute o comando `npm run test`
+- Para ver a cobertura do projeto execute o comando `npm run test -- --coverage .`
 - O relatório de cobertura será gerado dentro de `coverage/lcov-report/index.html`
 
 <!-- TODO: seção de preview, o que conseguiu implementar, o que não conseguiu -->
