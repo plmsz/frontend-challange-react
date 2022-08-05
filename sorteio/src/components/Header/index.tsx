@@ -43,8 +43,13 @@ function Header() {
           ))}
         </Dropdown>
         <Logo title={raffle} />
-        <h2>CONCURSO Nº {numberGame}</h2>
-        <p>Data: {date}</p>
+        <h2 className='title titleMobile'>CONCURSO Nº {numberGame}</h2>
+        <div className='titleDesktop'>
+          <h2 className='title'>CONCURSO</h2>
+          <p className='subtitle'>
+            {numberGame} - {date}
+          </p>
+        </div>
       </Container>
     </Background>
   )

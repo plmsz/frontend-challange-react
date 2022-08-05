@@ -11,6 +11,7 @@ import {
   black700,
   white,
 } from './../../styles/Variables'
+
 interface ContainerProps {
   bgColor: string
 }
@@ -71,22 +72,42 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6.3rem;
-  margin-bottom: 2rem;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  min-height: 46rem;
 
-  h2 {
-    margin-top: 7.5rem;
+  .title {
     text-transform: uppercase;
     color: ${white};
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
+
+  .titleDesktop {
+    display: none;
+  }
+
   @media (min-width: 768px) {
-    padding: 9.2rem 9.6rem;
     align-items: start;
+    padding-bottom: 4.6rem;
+    padding-left: 9.2rem;
+    height: 100%;
+    .titleMobile {
+      display: none;
+    }
+    .titleDesktop {
+      display: block;
+    }
+    .subtitle {
+      color: ${white};
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
   }
 `
+
 export const Dropdown = styled.select`
   text-transform: uppercase;
   padding: 1.6rem 1.8rem;
