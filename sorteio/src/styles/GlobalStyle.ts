@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components/'
-import { background, black600 } from './Variables'
+import { background, black400 } from './Variables'
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -18,7 +18,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: ${background};
-    color: ${black600};
+    color: ${black400};
 }
 `
 export default GlobalStyle

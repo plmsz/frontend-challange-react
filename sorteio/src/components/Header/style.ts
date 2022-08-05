@@ -8,7 +8,7 @@ import {
   lotoFacilColor,
   lotoManiaColor,
   sorteColor,
-  black700,
+  black600,
   white,
 } from './../../styles/Variables'
 
@@ -57,7 +57,7 @@ export const Background = styled.header<ContainerProps>`
     }
   }
   @media (min-width: 768px) {
-    min-width: 610px;
+    min-width: 410px;
     &:after {
       top: 0;
       height: 100vh;
@@ -65,6 +65,18 @@ export const Background = styled.header<ContainerProps>`
       left: -4%;
       -webkit-clip-path: ellipse(16% 50% at 98% 50%);
       clip-path: ellipse(15% 50% at 96% 50%);
+    }
+
+    @media (min-width: 1084px) {
+      min-width: 600px;
+      &:after {
+        top: 0;
+        min-height: 100vh;
+        right: -4%;
+        left: -4%;
+        -webkit-clip-path: ellipse(16% 50% at 98% 50%);
+        clip-path: ellipse(15% 50% at 96% 50%);
+      }
     }
   }
 `
@@ -111,7 +123,8 @@ export const Container = styled.div`
 export const Dropdown = styled.select`
   text-transform: uppercase;
   padding: 1.6rem 1.8rem;
-  box-shadow: 0 4px 6px ${black700};
+  background-color: ${white};
+  box-shadow: 0 4px 6px ${black600};
   border-radius: 0.6rem;
   border: transparent;
   width: 23.3rem;
