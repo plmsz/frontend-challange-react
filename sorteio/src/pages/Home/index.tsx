@@ -1,11 +1,12 @@
 import Header from '../../components/Header'
 import Raffle from './components/Raffle'
+import { Container } from './style'
 
 export function Home() {
   return (
-    <div>
+    <Container>
       <Header />
       <Raffle />
-    </div>
+    </Container>
   )
 }

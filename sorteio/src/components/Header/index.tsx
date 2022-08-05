@@ -1,5 +1,13 @@
+import { Container } from './style'
+
 function Header() {
-  return <header>MEGA-SENA</header>
+  const raffle = 'lotoFacilColor'
+
+  return (
+    <Container bgColor={raffle}>
+      <h1>MEGA</h1>
+    </Container>
+  )
 }
 
 export default Header
