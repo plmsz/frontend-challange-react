@@ -10,7 +10,7 @@ import {
   sorteColor,
   black600,
   white,
-} from './../../styles/Variables'
+} from '../../styles/Variables'
 
 interface ContainerProps {
   bgColor: string
@@ -43,15 +43,15 @@ export const Background = styled.header<ContainerProps>`
     content: '';
     position: absolute;
     background: ${background};
-    right: -10%;
-    left: -10%;
+    right: -5%;
+    left: -5%;
   }
   @media (max-width: 768px) {
     width: 100%;
-    min-height: 440px;
+    min-height: 46rem;
     &:after {
       bottom: 0;
-      height: 120px;
+      height: 7rem;
       -webkit-clip-path: ellipse(50% 60% at 50% 100%);
       clip-path: ellipse(50% 60% at 50% 100%);
     }
@@ -66,17 +66,12 @@ export const Background = styled.header<ContainerProps>`
       -webkit-clip-path: ellipse(16% 50% at 98% 50%);
       clip-path: ellipse(15% 50% at 96% 50%);
     }
+    @media (min-width: 830px) {
+      min-width: 550px;
+    }
 
     @media (min-width: 1084px) {
       min-width: 600px;
-      &:after {
-        top: 0;
-        min-height: 100vh;
-        right: -4%;
-        left: -4%;
-        -webkit-clip-path: ellipse(16% 50% at 98% 50%);
-        clip-path: ellipse(15% 50% at 96% 50%);
-      }
     }
   }
 `
@@ -86,15 +81,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding-top: 1.5rem;
-  min-height: 46rem;
-
-  .title {
-    text-transform: uppercase;
-    color: ${white};
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-  }
+  min-height: 42rem;
+  color: ${white};
 
   .titleDesktop {
     display: none;
@@ -105,21 +93,56 @@ export const Container = styled.div`
     padding-bottom: 4.6rem;
     padding-left: 9.2rem;
     height: 100%;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
     .titleMobile {
       display: none;
     }
     .titleDesktop {
       display: block;
     }
-    .subtitle {
-      color: ${white};
-      font-weight: 700;
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
   }
 `
+// export const Title = styled.h2`
+//   text-transform: uppercase;
+//   color: ${white};
+//   font-weight: 500;
+//   font-size: 1.4rem;
+//   line-height: 1.7rem;
+// `
+// export const TitleDesktop = styled(Title)`
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
 
+//   @media (min-width: 768px) {
+//     display: block;
+//     align-items: start;
+//     padding-bottom: 4.6rem;
+//     padding-left: 9.2rem;
+//     height: 100%;
+//   }
+// `
+// export const Subtitle = styled.span`
+//   @media (min-width: 768px) {
+//     color: ${white};
+//     font-weight: 700;
+//     font-size: 2rem;
+//     line-height: 2.5rem;
+//   }
+// `
 export const Dropdown = styled.select`
   text-transform: uppercase;
   padding: 1.6rem 1.8rem;
