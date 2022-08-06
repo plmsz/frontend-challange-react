@@ -2,33 +2,26 @@ import { Background, Container, Dropdown } from './style'
 import { Logo } from './Logo'
 import { useFetch } from '../../hooks/useFetch'
 import { Lottery } from '../../types/lottery'
-import { useCallback, useEffect, useState } from 'react'
-import { Draw, DrawNumbers, DrawSelected } from '../../types/drawType'
+import { useCallback, useEffect } from 'react'
+import { Draw } from '../../types/drawType'
 import { api } from '../../services/api'
 import { formatDate } from '../../helpers/formatDate'
+import useDrawContext from './../../hooks/useDrawContext'
 
 //TODO: Loading screen e condicionais de renderização, talvez erro?
-//TODO: styled component para title titlemobile titledesktop
 //TODO: remover console.log
 function Header() {
-  const [drawSelected, setDrawSelected] = useState<DrawSelected>({
-    loteria: 0,
-    nome: '',
-    id: '',
-    data: '',
-    numeros: [],
-  })
-  //fazer apenas um useFetch
+  const { drawSelected, setDrawSelected } = useDrawContext()
+  //LATER: fazer apenas um useFetch
   const { data, isFetching } = useFetch<Lottery[]>('loterias')
   const drawListData = useFetch<Draw[]>('loterias-concursos').data
-  const [firstDraw, setFirstDraw] = useState<DrawNumbers>()
 
   const fetchSelectedDraw = useCallback(async (id = '0') => {
     // TODO: concurso não encontrado { "error": true,  "message": "Concurso não encontrado"}
     try {
       const response = await api.get(`concursos/${id}`)
       const { data } = response
-      setFirstDraw(data)
+      setDrawSelected(data)
       return data
     } catch (error) {
       console.log(error)
@@ -56,9 +49,9 @@ function Header() {
 
   return (
     <>
-      {isFetching && <div>Loading...</div>}
-      {data && (
-        <Background bgColor={drawSelected.nome}>
+      <Background bgColor={drawSelected.nome}>
+        {isFetching && <div>Loading...</div>}
+        {data && (
           <Container>
             <Dropdown name='lotteryDropdown' value={drawSelected.nome} onChange={handleSelect}>
               {data.map((item) => (
@@ -70,19 +63,19 @@ function Header() {
             <Logo title={drawSelected.nome || data[0].nome} />
             {drawListData && (
               <>
-                <h2 className='title titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
+                <h2 className='titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
                 <div className='titleDesktop'>
-                  <h2 className='title'>CONCURSO</h2>
-                  <p className='subtitle'>
+                  <h2>CONCURSO</h2>
+                  <p>
                     {drawSelected.id || drawListData[0].concursoId} -{' '}
-                    {drawSelected.data || formatDate(firstDraw?.data || '1-01-01T11:00:16.918Z')}
+                    {formatDate(drawSelected.data) || formatDate(drawSelected?.data || '')}
                   </p>
                 </div>
               </>
             )}
           </Container>
-        </Background>
-      )}
+        )}
+      </Background>
     </>
   )
 }
