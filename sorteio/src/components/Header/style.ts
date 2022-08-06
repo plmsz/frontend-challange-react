@@ -10,7 +10,7 @@ import {
   sorteColor,
   black600,
   white,
-} from './../../styles/Variables'
+} from '../../styles/Variables'
 
 interface ContainerProps {
   bgColor: string
@@ -66,17 +66,12 @@ export const Background = styled.header<ContainerProps>`
       -webkit-clip-path: ellipse(16% 50% at 98% 50%);
       clip-path: ellipse(15% 50% at 96% 50%);
     }
+    @media (min-width: 830px) {
+      min-width: 550px;
+    }
 
     @media (min-width: 1084px) {
       min-width: 600px;
-      &:after {
-        top: 0;
-        min-height: 100vh;
-        right: -4%;
-        left: -4%;
-        -webkit-clip-path: ellipse(16% 50% at 98% 50%);
-        clip-path: ellipse(15% 50% at 96% 50%);
-      }
     }
   }
 `
