@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Loading from '.'
-import { quinaColor, white } from './../../styles/Variables'
+import { quinaColor, white } from '../../styles/Variables'
 
 it('should render the heading with the color pass in the props', () => {
   render(

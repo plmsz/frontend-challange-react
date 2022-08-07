@@ -1,4 +1,4 @@
-import { Background, Container } from './style'
+import { Container } from './style'
 import { Logo } from './Logo'
 import useFetch from '../../hooks/useFetch'
 import { Lottery } from '../../types/lottery'
@@ -9,6 +9,7 @@ import { formatDate } from '../../helpers/formatDate'
 import useDrawContext from './../../hooks/useDrawContext'
 import Loading from '../Loading'
 import { Dropdown } from './Dropdown'
+import { Background } from './Background'
 
 function Header() {
   const { drawSelected, setDrawSelected } = useDrawContext()
