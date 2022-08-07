@@ -7,7 +7,7 @@ import { Draw } from '../../types/drawType'
 import { api } from '../../services/api'
 import { formatDate } from '../../helpers/formatDate'
 import useDrawContext from './../../hooks/useDrawContext'
-import { LoadingHeader } from '../Loading'
+import Loading from '../Loading'
 import { Dropdown } from './Dropdown'
 
 function Header() {
@@ -53,7 +53,11 @@ function Header() {
     <>
       <Background bgColor={drawSelected.nome}>
         <Container>
-          {isFetching && isFetchingDrawListData && !error && !errorDrawListData && <LoadingHeader />}
+          {isFetching && isFetchingDrawListData && !error && !errorDrawListData && (
+            <Loading color='white' image={true}>
+              Carregando ...
+            </Loading>
+          )}
           {data && (
             <>
               <Dropdown data={data} value={drawSelected.nome} onChange={handleSelect} />

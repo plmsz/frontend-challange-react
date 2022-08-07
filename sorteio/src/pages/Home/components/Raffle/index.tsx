@@ -9,7 +9,11 @@ function Raffle() {
 
   return (
     <Container>
-      {numbers[0] === '' && <Loading />}
+      {numbers[0] === '' && (
+        <Loading color='quina' image={false}>
+          Aposte, hoje pode ser o seu dia!
+        </Loading>
+      )}
       {numbers[0] !== '' && (
         <>
           <NumbersList numbers={numbers} />

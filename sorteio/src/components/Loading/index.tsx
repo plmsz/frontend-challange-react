@@ -1,9 +1,17 @@
-import { Container, Heading } from './style'
-export function LoadingHeader() {
+import { ReactNode } from 'react'
+import { Heading } from './style'
+
+interface Props {
+  color: string
+  image: boolean
+  children: ReactNode
+}
+export default function Loading({ color, image, children }: Props) {
   return (
     <>
-      <Container>
+      {image && (
         <svg width='65' height='64' viewBox='0 0 65 64' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <title>clover</title>
           <path
             fillRule='evenodd'
             clipRule='evenodd'
@@ -17,16 +25,8 @@ export function LoadingHeader() {
             fill='white'
           />
         </svg>
-
-        <Heading color='white'>Carregando ...</Heading>
-      </Container>
-    </>
-  )
-}
-export default function Loading() {
-  return (
-    <>
-      <Heading color='quina'>Aposte, hoje pode ser o seu dia!</Heading>
+      )}
+      <Heading color={color}>{children}</Heading>
     </>
   )
 }
