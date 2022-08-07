@@ -2,7 +2,6 @@ export const background = 'hsla(0, 0%, 94%, 1)'
 export const black400 = 'hsla(0, 0%, 20%, 1)'
 export const black600 = 'hsla(0, 0%, 0%, 0.05)'
 export const white = 'hsla(0, 0%, 100%, 1)'
-export const a = 'hsla(240°, 100%, 8%)'
 
 export const megaColor = 'hsla(145, 80%, 68%, 1)'
 export const quinaColor = 'hsla(254, 81%, 67%, 1)'

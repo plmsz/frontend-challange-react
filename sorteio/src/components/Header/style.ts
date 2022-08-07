@@ -1,38 +1,10 @@
 import styled from 'styled-components/'
 import arrow from '../../assets/arrow.svg'
-import {
-  background,
-  megaColor,
-  quinaColor,
-  timeColor,
-  lotoFacilColor,
-  lotoManiaColor,
-  sorteColor,
-  black600,
-  white,
-} from '../../styles/Variables'
+import { handleColor } from '../../helpers/handleColor'
+import { background, black600, white } from '../../styles/Variables'
 
 interface ContainerProps {
   bgColor: string
-}
-
-export const handleColor = (color: string) => {
-  switch (color) {
-    case 'mega-sena':
-      return megaColor
-    case 'quina':
-      return quinaColor
-    case 'lotofácil':
-      return lotoFacilColor
-    case 'lotomania':
-      return lotoManiaColor
-    case 'timemania':
-      return timeColor
-    case 'dia de sorte':
-      return sorteColor
-    default:
-      return megaColor
-  }
 }
 
 export const Background = styled.header<ContainerProps>`
@@ -115,34 +87,6 @@ export const Container = styled.div`
     }
   }
 `
-// export const Title = styled.h2`
-//   text-transform: uppercase;
-//   color: ${white};
-//   font-weight: 500;
-//   font-size: 1.4rem;
-//   line-height: 1.7rem;
-// `
-// export const TitleDesktop = styled(Title)`
-//   @media (max-width: 768px) {
-//     display: none;
-//   }
-
-//   @media (min-width: 768px) {
-//     display: block;
-//     align-items: start;
-//     padding-bottom: 4.6rem;
-//     padding-left: 9.2rem;
-//     height: 100%;
-//   }
-// `
-// export const Subtitle = styled.span`
-//   @media (min-width: 768px) {
-//     color: ${white};
-//     font-weight: 700;
-//     font-size: 2rem;
-//     line-height: 2.5rem;
-//   }
-// `
 export const Dropdown = styled.select`
   text-transform: uppercase;
   padding: 1.6rem 1.8rem;

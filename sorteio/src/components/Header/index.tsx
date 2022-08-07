@@ -7,8 +7,9 @@ import { Draw } from '../../types/drawType'
 import { api } from '../../services/api'
 import { formatDate } from '../../helpers/formatDate'
 import useDrawContext from './../../hooks/useDrawContext'
+import { LoadingHeader } from '../Loading'
 
-//TODO: Loading screen e condicionais de renderização, talvez erro?
+//TODO: condicionais de renderização, talvez erro?
 //TODO: remover console.log
 function Header() {
   const { drawSelected, setDrawSelected } = useDrawContext()
@@ -50,31 +51,33 @@ function Header() {
   return (
     <>
       <Background bgColor={drawSelected.nome}>
-        {isFetching && <div>Loading...</div>}
-        {data && (
-          <Container>
-            <Dropdown name='lotteryDropdown' value={drawSelected.nome} onChange={handleSelect}>
-              {data.map((item) => (
-                <option value={item.nome} key={item.id}>
-                  {item.nome}
-                </option>
-              ))}
-            </Dropdown>
-            <Logo title={drawSelected.nome || data[0].nome} />
-            {drawListData && (
-              <>
-                <h2 className='titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
-                <div className='titleDesktop'>
-                  <h2>CONCURSO</h2>
-                  <p>
-                    {drawSelected.id || drawListData[0].concursoId} -{' '}
-                    {formatDate(drawSelected.data) || formatDate(drawSelected?.data || '')}
-                  </p>
-                </div>
-              </>
-            )}
-          </Container>
-        )}
+        <Container>
+          {(isFetching || !data) && <LoadingHeader />}
+          {data && (
+            <>
+              <Dropdown name='lotteryDropdown' value={drawSelected.nome} onChange={handleSelect}>
+                {data.map((item) => (
+                  <option value={item.nome} key={item.id}>
+                    {item.nome}
+                  </option>
+                ))}
+              </Dropdown>
+              <Logo title={drawSelected.nome || data[0].nome} />
+              {drawListData && (
+                <>
+                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
+                  <div className='titleDesktop'>
+                    <h2>CONCURSO</h2>
+                    <p>
+                      {drawSelected.id || drawListData[0].concursoId} -{' '}
+                      {formatDate(drawSelected.data) || formatDate(drawSelected?.data || '')}
+                    </p>
+                  </div>
+                </>
+              )}
+            </>
+          )}
+        </Container>
       </Background>
     </>
   )

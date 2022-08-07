@@ -1,3 +1,4 @@
+import Loading from '../../../../components/Loading'
 import useDrawContext from '../../../../hooks/useDrawContext'
 import { NumbersList } from './NumbersList'
 import { Container } from './style'
@@ -15,7 +16,7 @@ function Raffle() {
           </footer>
         </>
       ) : (
-        <div>Loading...</div>
+        <Loading />
       )}
     </Container>
   )
