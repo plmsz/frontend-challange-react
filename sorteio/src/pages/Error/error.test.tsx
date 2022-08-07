@@ -1,4 +1,4 @@
-import { render, screen } from '../../tests/test-utils'
+import { render, screen } from '../../tests/renderWithBrowserRouter'
 import userEvent from '@testing-library/user-event'
 import { Routes } from '../../routes'
 

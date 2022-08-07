@@ -1,6 +1,6 @@
 import { Routes } from '../../routes'
 import userEvent from '@testing-library/user-event'
-import { render, screen } from '../../tests/test-utils'
+import { render, screen } from '../../tests/renderWithBrowserRouter'
 
 it('should reload the page when user clicks the button', async () => {
   render(<Routes />, '/caixa')
