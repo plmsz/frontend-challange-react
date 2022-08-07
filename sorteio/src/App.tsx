@@ -1,13 +1,13 @@
 import { DrawContextProvider } from './context/DrawContext'
-import { Home } from './pages/Home'
 import GlobalStyle from './styles/GlobalStyle'
+import { Routes } from './routes'
 
 function App() {
   return (
     <>
       <DrawContextProvider>
         <GlobalStyle />
-        <Home />
+        <Routes />
       </DrawContextProvider>
     </>
   )
