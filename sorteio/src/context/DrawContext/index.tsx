@@ -16,7 +16,6 @@ const DrawContext = createContext<PropsDrawContext>(DEFAULT_VALUE)
 
 const DrawContextProvider = ({ children }: Props) => {
   const [drawSelected, setDrawSelected] = useState(DEFAULT_VALUE.drawSelected)
-
   return <DrawContext.Provider value={{ drawSelected, setDrawSelected }}>{children}</DrawContext.Provider>
 }
 

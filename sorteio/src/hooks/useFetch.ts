@@ -7,8 +7,8 @@ type State<T> = {
   isFetching?: boolean
   error?: string
 }
-//TODO: melhorar error
-export const useFetch = <T = unknown>(route: string): State<T> => {
+
+const useFetch = <T = unknown>(route: string): State<T> => {
   const [data, setData] = useState<T | null>(null)
   const [isFetching, setIsFetching] = useState(true)
   const [error, setError] = useState('')
@@ -22,7 +22,6 @@ export const useFetch = <T = unknown>(route: string): State<T> => {
         if (axios.isAxiosError(err)) {
           setError(err.message)
         }
-        console.error(err)
       }
       setIsFetching(false)
     }
@@ -35,3 +34,5 @@ export const useFetch = <T = unknown>(route: string): State<T> => {
     error,
   }
 }
+
+export default useFetch

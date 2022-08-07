@@ -5,3 +5,12 @@ export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 1000,
 })
+
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response) {
+      window.location.href = '/error'
+    }
+  },
+)
