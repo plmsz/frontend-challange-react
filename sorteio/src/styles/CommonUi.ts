@@ -7,8 +7,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${backgroundSecondary};
+  @media (min-width: 768px) and (max-width: 1024px) {
+    picture {
+      height: 75vh;
+    }
+  }
 `
 export const Heading = styled.h1`
   color: ${quinaColor};

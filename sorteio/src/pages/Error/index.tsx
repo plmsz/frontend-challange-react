@@ -2,8 +2,11 @@ import { Container, Heading } from '../../styles/CommonUi'
 import illustrationErrorSmall from '../../assets/something-went-wrong-256.png'
 import illustrationErrorMedium from '../../assets/something-went-wrong-412.png'
 import illustrationError from '../../assets/something-went-wrong-512.png'
+import { Button } from '../../components/Button'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function Error() {
+  const nagigate = useNavigate()
   return (
     <Container>
       <picture>
@@ -13,6 +16,9 @@ export function Error() {
         <img src={illustrationError} alt='' />
       </picture>
       <Heading>Desculpe, tente novamente.</Heading>
+      <Button type='button' onClick={() => nagigate('/')}>
+        Atualizar página
+      </Button>
     </Container>
   )
 }
