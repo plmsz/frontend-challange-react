@@ -1,18 +1,9 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '../../tests/test-utils'
 import userEvent from '@testing-library/user-event'
 import { Routes } from '../../routes'
-import { BrowserRouter } from 'react-router-dom'
 
-const renderWithRouter = (ui: JSX.Element, { route = '/error' } = {}) => {
-  window.history.pushState({}, 'Error page', route)
-
-  return {
-    user: userEvent,
-    ...render(ui, { wrapper: BrowserRouter }),
-  }
-}
-it('should goes back to home page, when user clicks the button', async () => {
-  renderWithRouter(<Routes />)
+it('should go back to home page, when user clicks the button', async () => {
+  render(<Routes />, '/error')
   const button = screen.getByRole('button', {
     name: /atualizar página/i,
   })
@@ -20,7 +11,7 @@ it('should goes back to home page, when user clicks the button', async () => {
   await userEvent.click(button)
 
   const headingError = screen.queryByRole('heading', {
-    name: /oops\. página não existe\./i,
+    name: /desculpe, tente novamente.\./i,
   })
   expect(headingError).not.toBeInTheDocument()
 
