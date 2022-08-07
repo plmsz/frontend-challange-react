@@ -1,18 +1,19 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { api } from '../services/api'
+import useDrawContext from './useDrawContext'
 
 type State<T> = {
   data: T | null
   isFetching?: boolean
   error?: string
 }
-//TODO: melhorar error
-export const useFetch = <T = unknown>(route: string): State<T> => {
+
+const useFetch = <T = unknown>(route: string): State<T> => {
   const [data, setData] = useState<T | null>(null)
   const [isFetching, setIsFetching] = useState(true)
   const [error, setError] = useState('')
-
+  const { setMessageError } = useDrawContext()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -21,8 +22,8 @@ export const useFetch = <T = unknown>(route: string): State<T> => {
       } catch (err) {
         if (axios.isAxiosError(err)) {
           setError(err.message)
+          setMessageError(true)
         }
-        console.error(err)
       }
       setIsFetching(false)
     }
@@ -35,3 +36,5 @@ export const useFetch = <T = unknown>(route: string): State<T> => {
     error,
   }
 }
+
+export default useFetch
