@@ -9,11 +9,9 @@ import { formatDate } from '../../helpers/formatDate'
 import useDrawContext from './../../hooks/useDrawContext'
 import { LoadingHeader } from '../Loading'
 
-//TODO: condicionais de renderização, talvez erro?
-
+//LATER: fazer apenas um useFetch?
 function Header() {
-  const { drawSelected, setDrawSelected, setMessageError } = useDrawContext()
-  //LATER: fazer apenas um useFetch?
+  const { drawSelected, setDrawSelected } = useDrawContext()
   const { data, isFetching, error } = useFetch<Lottery[]>('loterias')
   const {
     data: drawListData,
@@ -28,7 +26,7 @@ function Header() {
       setDrawSelected(data)
       return data
     } catch (error) {
-      setMessageError(true)
+      console.warn(error)
     }
   }, [])
 
@@ -38,7 +36,7 @@ function Header() {
         fetchSelectedDraw(drawListData[0].concursoId)
       }
     } catch (error) {
-      setMessageError(true)
+      console.warn(error)
     }
   }, [drawListData])
 

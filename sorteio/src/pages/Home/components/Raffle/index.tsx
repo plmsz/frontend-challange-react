@@ -1,18 +1,16 @@
 import Loading from '../../../../components/Loading'
-import { Message } from '../../../../components/Message'
 import useDrawContext from '../../../../hooks/useDrawContext'
 import { NumbersList } from './NumbersList'
 import { Container } from './style'
 
 function Raffle() {
-  const { drawSelected, errorMessage } = useDrawContext()
+  const { drawSelected } = useDrawContext()
   const numbers = drawSelected.numeros
 
   return (
     <Container>
-      {errorMessage && <Message />}
-      {!errorMessage && numbers[0] === '' && <Loading />}
-      {numbers[0] !== '' && !errorMessage && (
+      {numbers[0] === '' && <Loading />}
+      {numbers[0] !== '' && (
         <>
           <NumbersList numbers={numbers} />
           <footer>
