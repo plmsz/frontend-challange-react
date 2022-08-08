@@ -65,13 +65,10 @@ function Header() {
               <Logo title={drawSelected.nome || data[0].nome} />
               {drawListData && (
                 <>
-                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
+                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected?.id || drawListData[0]?.concursoId}</h2>
                   <div className='titleDesktop'>
                     <h2>CONCURSO</h2>
-                    <p>
-                      {drawSelected.id || drawListData[0].concursoId} -{' '}
-                      {formatDate(drawSelected.data) || formatDate(drawSelected?.data || '')}
-                    </p>
+                    <p>{formatDate(drawSelected?.data) || formatDate(drawSelected?.data || '')}</p>
                   </div>
                 </>
               )}

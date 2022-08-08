@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-debugging-utils */
-import { render, screen } from '@testing-library/react'
+import { render, screen, act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Dropdown } from '.'
 
@@ -37,28 +37,19 @@ it('should display the correct number of options', () => {
   const options = screen.getAllByRole('option')
   expect(options).toHaveLength(6)
 })
-it.skip('calls onChange prop on combobox change', () => {
+it('calls onChange prop on combobox change', async () => {
   const onChange = jest.fn()
   render(<Dropdown data={data} value={data[0].nome} onChange={onChange} />)
 
-  const combobox = screen.getByRole('combobox')
-  userEvent.click(combobox)
+  const combobox = screen.getByRole('combobox', {
+    name: /loterias/i,
+  })
 
-  const quinaOption = screen.getByText(/quina/i)
-
-  userEvent.click(quinaOption)
-  expect(onChange).toHaveBeenCalled()
-})
-
-it.skip('should allow user to change the lottery', async () => {
-  render(<Dropdown data={data} value={data[0].nome} onChange={jest.fn()} />)
-
-  const combobox = screen.getByRole('combobox')
-  expect(combobox).toHaveValue('mega-sena')
   const quinaOption = screen.getByRole('option', { name: /quina/i }) as HTMLOptionElement
-  userEvent.selectOptions(combobox, quinaOption)
-  expect(combobox).toHaveValue('quina')
 
-  //   userEvent.click(quinaOption)
-  //   expect(quinaOption.selected).toBe(true)
+  userEvent.selectOptions(combobox, quinaOption)
+
+  await waitFor(async () => {
+    expect(onChange).toHaveBeenCalled()
+  })
 })
