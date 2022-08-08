@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://brainn-api-loterias.herokuapp.com/api/v1'
+export const BASE_URL = 'https://brainn-api-loterias.herokuapp.com/api/v1'
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 1000,
@@ -11,6 +11,8 @@ api.interceptors.response.use(
   (error) => {
     if (error.response) {
       window.location.href = '/error'
+      return
     }
+    return Promise.reject(error)
   },
 )

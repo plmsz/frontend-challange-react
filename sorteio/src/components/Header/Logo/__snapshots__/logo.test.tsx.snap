@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly: create 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bczRLJ dZSZMH"
+  >
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="logoPrimary.svg"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="logoSecondary.svg"
+      />
+      <img
+        alt="logo - trevo de 4 folhas"
+        src="logoPrimary.svg"
+      />
+    </picture>
+    <h1>
+      MEGA-SENA
+    </h1>
+  </div>
+</DocumentFragment>
+`;

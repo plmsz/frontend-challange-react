@@ -29,4 +29,7 @@ export const Container = styled.div`
     color: black;
     opacity: 0.5;
   }
+  .visibility {
+    display: none;
+  }
 `

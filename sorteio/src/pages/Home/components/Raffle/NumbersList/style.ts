@@ -12,7 +12,7 @@ export const List = styled.ul`
   @media (min-width: 768px) and (max-width: 995px) {
     gap: 1rem;
   }
-  div {
+  li {
     background-color: ${white};
     border-radius: 50%;
     width: 6rem;
@@ -20,11 +20,8 @@ export const List = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    li {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 2.4rem;
-    }
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
   }
 `

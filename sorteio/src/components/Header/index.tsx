@@ -1,4 +1,4 @@
-import { Background, Container } from './style'
+import { Container } from './style'
 import { Logo } from './Logo'
 import useFetch from '../../hooks/useFetch'
 import { Lottery } from '../../types/lottery'
@@ -7,8 +7,9 @@ import { Draw } from '../../types/drawType'
 import { api } from '../../services/api'
 import { formatDate } from '../../helpers/formatDate'
 import useDrawContext from './../../hooks/useDrawContext'
-import { LoadingHeader } from '../Loading'
+import Loading from '../Loading'
 import { Dropdown } from './Dropdown'
+import { Background } from './Background'
 
 function Header() {
   const { drawSelected, setDrawSelected } = useDrawContext()
@@ -38,7 +39,7 @@ function Header() {
     } catch (error) {
       console.warn(error)
     }
-  }, [drawListData])
+  }, [data, drawListData])
 
   const handleSelect = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selected = e.target.value
@@ -53,19 +54,22 @@ function Header() {
     <>
       <Background bgColor={drawSelected.nome}>
         <Container>
-          {isFetching && isFetchingDrawListData && !error && !errorDrawListData && <LoadingHeader />}
+          {isFetching && isFetchingDrawListData && !error && !errorDrawListData && (
+            <Loading color='white' image={true}>
+              Carregando ...
+            </Loading>
+          )}
           {data && (
             <>
               <Dropdown data={data} value={drawSelected.nome} onChange={handleSelect} />
               <Logo title={drawSelected.nome || data[0].nome} />
               {drawListData && (
                 <>
-                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected.id || drawListData[0].concursoId}</h2>
+                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected?.id || drawListData[0]?.concursoId || ''}</h2>
                   <div className='titleDesktop'>
                     <h2>CONCURSO</h2>
                     <p>
-                      {drawSelected.id || drawListData[0].concursoId} -{' '}
-                      {formatDate(drawSelected.data) || formatDate(drawSelected?.data || '')}
+                      {drawSelected?.id || drawListData[0]?.concursoId || ''} - {formatDate(drawSelected?.data) || ''}
                     </p>
                   </div>
                 </>
