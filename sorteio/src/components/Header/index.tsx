@@ -39,7 +39,7 @@ function Header() {
     } catch (error) {
       console.warn(error)
     }
-  }, [drawListData])
+  }, [data, drawListData])
 
   const handleSelect = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selected = e.target.value
@@ -65,12 +65,11 @@ function Header() {
               <Logo title={drawSelected.nome || data[0].nome} />
               {drawListData && (
                 <>
-                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected?.id || drawListData[0]?.concursoId}</h2>
+                  <h2 className='titleMobile'>CONCURSO Nº {drawSelected?.id || drawListData[0]?.concursoId || ''}</h2>
                   <div className='titleDesktop'>
                     <h2>CONCURSO</h2>
                     <p>
-                      {formatDate(drawSelected?.id) || formatDate(drawListData[0]?.concursoId)} -
-                      {formatDate(drawSelected?.data) || formatDate(drawSelected?.data)}
+                      {drawSelected?.id || drawListData[0]?.concursoId || ''} - {formatDate(drawSelected?.data) || ''}
                     </p>
                   </div>
                 </>
