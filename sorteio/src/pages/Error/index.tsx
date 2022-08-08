@@ -13,7 +13,7 @@ export function Error() {
         <source media='(min-width: 700px)' srcSet={illustrationError} />
         <source media='(min-width: 425px)' srcSet={illustrationErrorMedium} />
         <source media='(max-width: 425px)' srcSet={illustrationErrorSmall} />
-        <img src={illustrationError} alt='' />
+        <img src={illustrationError} alt='ilustração cacto com balão de exclamação indicando erro' />
       </picture>
       <Heading>Desculpe, tente novamente.</Heading>
       <Button type='button' onClick={() => nagigate('/')}>

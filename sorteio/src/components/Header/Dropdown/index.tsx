@@ -9,7 +9,7 @@ interface Props {
 
 export function Dropdown({ data, value, onChange }: Props) {
   return (
-    <DropdownStyled name='lotteryDropdown' value={value} onChange={onChange}>
+    <DropdownStyled name='lotteryDropdown' value={value} onChange={onChange} aria-label='Loterias'>
       {data.map((item) => (
         <option value={item.nome} key={item.id}>
           {item.nome}

@@ -8,9 +8,7 @@ export function NumbersList(props: Props) {
   return (
     <List>
       {numbers.map((item) => (
-        <div key={item}>
-          <li>{item}</li>
-        </div>
+        <li key={item}>{item}</li>
       ))}
     </List>
   )

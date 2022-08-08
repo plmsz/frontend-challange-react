@@ -15,12 +15,13 @@ function Raffle() {
         </Loading>
       )}
       {numbers[0] !== '' && (
-        <>
+        <main>
+          <h1 className='visibility'>Resultados</h1>
           <NumbersList numbers={numbers} />
           <footer>
             <span>Este sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA.</span>
           </footer>
-        </>
+        </main>
       )}
     </Container>
   )

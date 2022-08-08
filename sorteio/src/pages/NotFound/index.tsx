@@ -12,7 +12,7 @@ export function NotFound() {
         <source media='(min-width: 700px)' srcSet={illustration404} />
         <source media='(min-width: 425px)' srcSet={illustration404Medium} />
         <source media='(max-width: 425px)' srcSet={illustration404Small} />
-        <img src={illustration404} alt='' />
+        <img src={illustration404} alt='ilustração de balões voando' />
       </picture>
       <Heading>Oops. Página não existe.</Heading>
       <Link to='/'>

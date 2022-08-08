@@ -12,7 +12,7 @@ export function Logo({ title }: Props) {
       <picture>
         <source media='(max-width: 768px)' srcSet={logoPrimary} />
         <source media='(min-width: 768px)' srcSet={logoSecondary} />
-        <img src={logoPrimary} alt='' />
+        <img src={logoPrimary} alt='logo - trevo de 4 folhas' />
       </picture>
       <h1>{title}</h1>
     </Container>
