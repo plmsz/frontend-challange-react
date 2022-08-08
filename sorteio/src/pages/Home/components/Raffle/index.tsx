@@ -5,7 +5,7 @@ import { Container } from './style'
 
 function Raffle() {
   const { drawSelected } = useDrawContext()
-  const numbers = drawSelected.numeros || ['']
+  const numbers = drawSelected?.numeros
 
   return (
     <Container>

@@ -80,7 +80,7 @@ exports[`renders correctly: create 1`] = `
             CONCURSO
           </h2>
           <p>
-            Invalid Date
+            1000 - Invalid Date
           </p>
         </div>
       </div>
