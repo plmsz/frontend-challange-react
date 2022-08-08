@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly: create 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-ftvSup KoSIc"
+  >
+    <header
+      class="sc-jSMfEi boQBfG"
+    >
+      <div
+        class="sc-bczRLJ ePhNbS"
+      >
+        <select
+          class="sc-eCYdqJ bBEFDc"
+          name="lotteryDropdown"
+        >
+          <option
+            value="mega-sena"
+          >
+            mega-sena
+          </option>
+          <option
+            value="quina"
+          >
+            quina
+          </option>
+          <option
+            value="lotofácil"
+          >
+            lotofácil
+          </option>
+          <option
+            value="lotomania"
+          >
+            lotomania
+          </option>
+          <option
+            value="timemania"
+          >
+            timemania
+          </option>
+          <option
+            value="dia de sorte"
+          >
+            dia de sorte
+          </option>
+        </select>
+        <div
+          class="sc-gsnTZi gEzBOl"
+        >
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="logoPrimary.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="logoSecondary.svg"
+            />
+            <img
+              alt=""
+              src="logoPrimary.svg"
+            />
+          </picture>
+          <h1>
+            mega-sena
+          </h1>
+        </div>
+        <h2
+          class="titleMobile"
+        >
+          CONCURSO Nº 1000
+        </h2>
+        <div
+          class="titleDesktop"
+        >
+          <h2>
+            CONCURSO
+          </h2>
+          <p>
+            1000 - Invalid Date
+          </p>
+        </div>
+      </div>
+    </header>
+    <div
+      class="sc-iBkjds kvUFDs"
+    >
+      <h1
+        class="sc-dkzDqf iDJqVp"
+        color="quina"
+      >
+        Aposte, hoje pode ser o seu dia!
+      </h1>
+    </div>
+  </div>
+</DocumentFragment>
+`;
