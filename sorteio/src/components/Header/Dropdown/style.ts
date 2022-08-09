@@ -17,4 +17,8 @@ export const DropdownStyled = styled.select`
   background-position-x: 90%;
   background-position-y: 2.2rem;
   background-image: url(${arrow});
+
+  option {
+    text-transform: uppercase;
+  }
 `
