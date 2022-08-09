@@ -8,22 +8,24 @@ function Raffle() {
   const numbers = drawSelected?.numeros
 
   return (
-    <Container>
+    <>
       {numbers[0] === '' && (
-        <Loading color='quina' image={false}>
-          Aposte, hoje pode ser o seu dia!
-        </Loading>
+        <Container>
+          <Loading color='quina' image={false}>
+            Aposte, hoje pode ser o seu dia!
+          </Loading>
+        </Container>
       )}
       {numbers[0] !== '' && (
-        <main>
+        <Container>
           <h1 className='visibility'>Resultados</h1>
           <NumbersList numbers={numbers} />
           <footer>
             <span>Este sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA.</span>
           </footer>
-        </main>
+        </Container>
       )}
-    </Container>
+    </>
   )
 }
 

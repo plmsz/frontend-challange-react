@@ -1,6 +1,6 @@
 import styled from 'styled-components/'
 import { handleColor } from '../../../helpers/handleColor'
-import { background } from '../../../styles/Variables'
+import { background, quinaColor } from '../../../styles/Variables'
 
 interface ContainerProps {
   bgColor: string
@@ -20,7 +20,8 @@ export const BackgroundStyled = styled.header<ContainerProps>`
     width: 100%;
     min-height: 46rem;
     &:after {
-      bottom: 0;
+      position: absolute;
+      bottom: 0rem;
       height: 7rem;
       -webkit-clip-path: ellipse(50% 60% at 50% 100%);
       clip-path: ellipse(50% 60% at 50% 100%);
