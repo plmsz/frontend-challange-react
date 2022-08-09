@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const BASE_URL = 'https://brainn-api-loterias.herokuapp.com/api/v1'
+export const BASE_URL = 'https://brainn-api-loterias.herokuapp.com/api/v'
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 1000,

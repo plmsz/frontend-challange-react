@@ -6,19 +6,21 @@
 ## 💻 Projeto
 
 O objetivo é construir uma **aplicação web front-end** que mostre os **Resultados das Loterias**.
-Veja o projeto [aqui](sorteio-green.vercel.app)
+Veja o projeto [aqui](https://sorteio-green.vercel.app/)
 
-<br/> 
+<br/>
 
 ---
+
 ## 🚀 Tecnologias
+
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - ReactJS
 - Typescript
 - Styled Components
 - React Testing Library
-<br/> 
+  <br/>
 
 ---
 
@@ -28,7 +30,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <br />
 
 ---
+
 ## 🏃‍♀️ Executando localmente
+
 ```bash
   # Clone o repositório
   $ git clone git@github.com:plmsz/frontend-challange-react.git
@@ -42,18 +46,21 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
  # Execute a aplicação
   $ npm start
  # Acesse em <http://localhost:3000>
- ```
-<br/> 
+```
+
+<br/>
 
 ---
+
 ## 🧪 Testes
 
-<img src='./sorteio/coverage/badge-functions.svg' alt=''>
-<img src='./sorteio/coverage/badge-lines.svg' alt=''>
-<img src='./sorteio/coverage/badge-statements.svg' alt=''>
-<img src='./sorteio/coverage/badge-branches.svg' alt=''>
-
-<br/> 
+<div align="center">
+  <img src='./sorteio/coverage/badge-functions.svg' alt=''>
+  <img src='./sorteio/coverage/badge-lines.svg' alt=''>
+  <img src='./sorteio/coverage/badge-statements.svg' alt=''>
+  <img src='./sorteio/coverage/badge-branches.svg' alt=''>
+<div />
+<br/>
 
 ---
 
@@ -64,29 +71,44 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - O relatório de cobertura será gerado dentro de `coverage/lcov-report/index.html`
 
 ## Features que implementei além do desafio
+
 - Componente de loading
 - Redirecionamento pata tela de erro pelo interceptor do axios
 
 ## 📱 Telas
 
 <div align="center">
-  <img src="." title="Tela de inicial" width="400" />
+  <img src="./sorteio/src/assets/tela0.png" title="Tela inicial, enquanto carrega" width="400" />
+</div>
+<div align="center">
+  <img src="./sorteio/src/assets/tela1.png" title="Tela inicial" width="400" />
+</div>
+<div align="center">
+  <img src="./sorteio/src/assets/tela404.png" title="Tela de página não encotrada" width="400" />
+</div>
+<div align="center">
+  <img src="./sorteio/src/assets/telaError.png" title="Tela de erro" width="400" />
+</div>
+<div align="center">
+  <img src="./sorteio/src/assets/tela1mobile.png" title="Tela inicial versão mobile" height='300' />
 </div>
 
-<br/> 
+<br/>
 
 ---
+
 ## 🔖 Informações do desafio original
 
 Você pode visualizar todas as informações sobre o desafio [aqui](./instrucao.md)
 
-<br/> 
+<br/>
 
 ---
+
 > 💬 **Nota**
 > A aplicação obteve um score em média de 95 em acessibilidade no Lighthouse, devido ao baixo contraste dos textos em alguns componentes. Optei no momento por manter as cores escolhidas pelo designer do desafio original.
 
-<br/> 
+<br/>
 
 ---
 
@@ -95,7 +117,7 @@ Você pode visualizar todas as informações sobre o desafio [aqui](./instrucao.
 <div align="center">
 <img style="border-radius: 50% ;" src="https://github.com/plmsz.png" width="100px;" alt=""/>
 </div>
-<div align="center">
+
 </br>
 
 [![LinkedIn](https://img.shields.io/static/v1?label=&message=LinkedIn&color=blue&style=flat-square&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/plmsz/)
