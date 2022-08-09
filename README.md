@@ -59,7 +59,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <img src='./sorteio/coverage/badge-lines.svg' alt=''>
   <img src='./sorteio/coverage/badge-statements.svg' alt=''>
   <img src='./sorteio/coverage/badge-branches.svg' alt=''>
-<div />
+</div>
 <br/>
 
 ---
@@ -78,16 +78,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 📱 Telas
 
 <div align="center">
-  <img src="./sorteio/src/assets/tela0.png" title="Tela inicial, enquanto carrega" width="400" />
+  <img src="./sorteio/src/assets/tela0.png" title="Tela inicial, enquanto carrega" width="800" />
 </div>
 <div align="center">
-  <img src="./sorteio/src/assets/tela1.png" title="Tela inicial" width="400" />
+  <img src="./sorteio/src/assets/tela1.png" title="Tela inicial" width="800" />
 </div>
 <div align="center">
-  <img src="./sorteio/src/assets/tela404.png" title="Tela de página não encotrada" width="400" />
+  <img src="./sorteio/src/assets/tela404.png" title="Tela de página não encotrada" width="800" />
 </div>
 <div align="center">
-  <img src="./sorteio/src/assets/telaError.png" title="Tela de erro" width="400" />
+  <img src="./sorteio/src/assets/telaError.png" title="Tela de erro" width="800" />
 </div>
 <div align="center">
   <img src="./sorteio/src/assets/tela1mobile.png" title="Tela inicial versão mobile" height='300' />
