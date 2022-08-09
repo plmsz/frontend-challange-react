@@ -1,3 +1,6 @@
 export function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString('pt-BR')
+  if (date) {
+    return new Date(date).toLocaleDateString('pt-BR')
+  }
+  return ''
 }

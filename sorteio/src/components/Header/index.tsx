@@ -69,7 +69,7 @@ function Header() {
                   <div className='titleDesktop'>
                     <h2>CONCURSO</h2>
                     <p>
-                      {drawSelected?.id || drawListData[0]?.concursoId || ''} - {formatDate(drawSelected?.data) || ''}
+                      {drawSelected?.id || drawListData[0]?.concursoId || ''} - {formatDate(drawSelected?.data)}
                     </p>
                   </div>
                 </>
