@@ -1,5 +1,5 @@
 import { Home } from './index'
-import { act, render, screen } from '../../tests/renderWithContext'
+import { act, fireEvent, render, screen, waitFor } from '../../tests/renderWithContext'
 import userEvent from '@testing-library/user-event'
 
 it('renders correctly', async () => {
@@ -49,4 +49,13 @@ it('should show the a title, contest number, the date and the results, after cha
   const itemsContent = listItems.map((item) => item.textContent)
 
   expect(itemsContent).toEqual(['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000', '2000'])
+})
+it('should render a button at the bottom of the page if the screen is long enough', async () => {
+  render(<Home />)
+  await act(async () => Promise.resolve())
+
+  fireEvent.scroll(window, { target: { scrollY: 180 } })
+  const img = screen.getByRole('img', { name: /voltar para o topo da página/i })
+
+  expect(img).toBeInTheDocument()
 })
