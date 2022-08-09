@@ -54,7 +54,7 @@ function Header() {
     <>
       <Background bgColor={drawSelected.nome}>
         <Container>
-          {isFetching && isFetchingDrawListData && !error && !errorDrawListData && (
+          {(isFetching || isFetchingDrawListData) && !error && !errorDrawListData && (
             <Loading color='white' image={true}>
               Carregando ...
             </Loading>
