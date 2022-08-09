@@ -27,7 +27,7 @@ function Header() {
       setDrawSelected(data)
       return data
     } catch (error) {
-      console.warn(error)
+      console.warn('Desculpe, houve um erro')
     }
   }, [])
 
@@ -37,7 +37,7 @@ function Header() {
         fetchSelectedDraw(drawListData[0].concursoId)
       }
     } catch (error) {
-      console.warn(error)
+      console.warn('Desculpe, houve um erro')
     }
   }, [data, drawListData])
 
