@@ -74,6 +74,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Componente de loading
 - Redirecionamento para tela de erro pelo interceptor do axios
+- Botão voltar para o topo
 
 ## 📱 Telas
 
