@@ -55,7 +55,7 @@ it('should render a button at the bottom of the page if the screen is long enoug
   await act(async () => Promise.resolve())
 
   fireEvent.scroll(window, { target: { scrollY: 180 } })
-  const img = screen.getByRole('img', { name: /voltar para o topo da página/i })
+  const img = screen.getByRole('button', { name: /voltar para o topo da página/i })
 
   expect(img).toBeInTheDocument()
 })
