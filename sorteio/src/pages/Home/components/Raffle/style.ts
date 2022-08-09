@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   text-align: center;
   padding: 0 3.7rem 2rem;
+
   @media (min-width: 768px) {
     width: 100%;
     justify-content: space-evenly;

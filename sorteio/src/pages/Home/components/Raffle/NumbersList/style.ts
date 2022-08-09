@@ -8,7 +8,6 @@ export const List = styled.ul`
   padding-inline-start: 0;
   justify-content: center;
   gap: 2.6rem;
-
   @media (min-width: 768px) and (max-width: 995px) {
     gap: 1rem;
   }

@@ -73,7 +73,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## Features que implementei além do desafio
 
 - Componente de loading
-- Redirecionamento pata tela de erro pelo interceptor do axios
+- Redirecionamento para tela de erro pelo interceptor do axios
 
 ## 📱 Telas
 
@@ -120,7 +120,9 @@ Você pode visualizar todas as informações sobre o desafio [aqui](./instrucao.
 
 </br>
 
+<div align="center">
+
 [![LinkedIn](https://img.shields.io/static/v1?label=&message=LinkedIn&color=blue&style=flat-square&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/plmsz/)
 [![Email](https://img.shields.io/static/v1?label=&message=Email&color=red&style=flat-square&logo=Gmail&logoColor=white)](mailto:plmsouzaoliveira@gmail.com)
 [![Twitter Badge](https://img.shields.io/static/v1?label=&message=Twitter&color=1ca0f1&style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/plmszdev)
-</span>
+</div>
