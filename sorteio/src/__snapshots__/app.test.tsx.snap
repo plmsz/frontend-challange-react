@@ -13,7 +13,7 @@ exports[`renders home correctly: create 1`] = `
       >
         <select
           aria-label="Loterias"
-          class="sc-eCYdqJ bBEFDc"
+          class="sc-eCYdqJ fexViO"
           name="lotteryDropdown"
         >
           <option
@@ -80,7 +80,7 @@ exports[`renders home correctly: create 1`] = `
             CONCURSO
           </h2>
           <p>
-            1000 - Invalid Date
+            1000 - 
           </p>
         </div>
       </div>
