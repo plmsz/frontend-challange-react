@@ -23,7 +23,7 @@ export const move = keyframes`
 }
 `
 
-export const Container = styled.span`
+export const Container = styled.button`
   position: relative;
   svg {
     position: fixed;

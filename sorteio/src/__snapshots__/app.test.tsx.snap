@@ -3,17 +3,17 @@
 exports[`renders home correctly: create 1`] = `
 <DocumentFragment>
   <div
-    class="sc-ftvSup KoSIc"
+    class="sc-papXJ gkSmcJ"
   >
     <header
-      class="sc-jSMfEi boQBfG"
+      class="sc-gKXOVf kkZcHQ"
     >
       <div
-        class="sc-bczRLJ ePhNbS"
+        class="sc-gsnTZi dkJDGY"
       >
         <select
           aria-label="Loterias"
-          class="sc-eCYdqJ fexViO"
+          class="sc-jSMfEi RuIrY"
           name="lotteryDropdown"
         >
           <option
@@ -48,7 +48,7 @@ exports[`renders home correctly: create 1`] = `
           </option>
         </select>
         <div
-          class="sc-gsnTZi gEzBOl"
+          class="sc-dkzDqf lfMgJK"
         >
           <picture>
             <source
@@ -85,16 +85,16 @@ exports[`renders home correctly: create 1`] = `
         </div>
       </div>
     </header>
-    <div
-      class="sc-iBkjds bbYePF"
+    <main
+      class="sc-ftvSup ccABDJ"
     >
       <h1
-        class="sc-dkzDqf iDJqVp"
+        class="sc-hKMtZM cQIvia"
         color="quina"
       >
         Aposte, hoje pode ser o seu dia!
       </h1>
-    </div>
+    </main>
   </div>
 </DocumentFragment>
 `;

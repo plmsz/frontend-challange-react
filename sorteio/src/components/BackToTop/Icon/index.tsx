@@ -1,12 +1,9 @@
-import useDrawContext from './../../hooks/useDrawContext'
-import { handleColor } from './../../helpers/handleColor'
 interface Props {
   onClick: () => void
+  color: string
 }
 
-function Icon({ onClick }: Props) {
-  const { drawSelected } = useDrawContext()
-  const color = handleColor(drawSelected.nome)
+function Icon({ onClick, color }: Props) {
   return (
     <svg
       onClick={onClick}

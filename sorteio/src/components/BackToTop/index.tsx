@@ -1,9 +1,13 @@
 import { Container } from './style'
 import { useEffect, useState } from 'react'
-import Icon from './icon'
+import Icon from './Icon'
+import useDrawContext from '../../hooks/useDrawContext'
+import { handleColor } from '../../helpers/handleColor'
 
 export function BackToTop() {
   const [showButton, setShowButton] = useState(false)
+  const { drawSelected } = useDrawContext()
+  const color = handleColor(drawSelected.nome)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -26,7 +30,7 @@ export function BackToTop() {
     <>
       {showButton && (
         <Container>
-          <Icon onClick={goBackTop} />
+          <Icon onClick={goBackTop} color={color} />
         </Container>
       )}
     </>
